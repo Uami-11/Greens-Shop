@@ -22,7 +22,6 @@ Final project for Fundamentals of Web Development Module. Building an e-commerce
 - magic-items/dragon-slayer
 - magic-items/dwarven-thrower
 - magic-items/frost-brand
-- magic-items/shortsword
 - magic-items/berserker-axe
 - magic-items/hammer-of-thunderbolts
 - magic-items/dagger-of-venom
