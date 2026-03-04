@@ -7,37 +7,37 @@ Final project for Fundamentals of Web Development Module. Building an e-commerce
 
 ### armor
 
-- padded-armor
-- leather-armor
-- studded-leather-armor
-- chain-mail
-- plate-armor
-- half-plate-armor
-- adamantine-armor
-- shield
-- animated-shield
-- dragon-scale-mail
+- magic-items/armor-of-invulnerability
+- magic-items/arrow-catching-shield
+- magic-items/demon-armor
+- magic-items/dwarven-plate
+- magic-items/glamoured-studded-leather-armor
+- magic-items/shield-of-missile-attraction
+- magic-items/adamantine-armor
+- magic-items/armor-3
+- magic-items/animated-shield
+- magic-items/dragon-scale-mail
 
 ### weapons
-- longsword
-- rapier
-- longbow
-- shortsword
-- greataxe
-- crossbow-heavy
-- dagger
-- dancing-sword
-- sword-of-life-stealing
-- nine-lives-stealer
-- mace-of-terror
-- luck-blade
-- javelin-of-lightening
-- holy-avenger
-- scimitar-of-speed
-- sun-blade
-- trident-of-fish-command
-- vicious-weapon
-- oath-bow
+- magic-items/dragon-slayer
+- magic-items/dwarven-thrower
+- magic-items/frost-brand
+- magic-items/shortsword
+- magic-items/berserker-axe
+- magic-items/hammer-of-thunderbolts
+- magic-items/dagger-of-venom
+- magic-items/dancing-sword
+- magic-items/sword-of-life-stealing
+- magic-items/nine-lives-stealer
+- magic-items/mace-of-terror
+- magic-items/luck-blade
+- magic-items/javelin-of-lightening
+- magic-items/holy-avenger
+- magic-items/scimitar-of-speed
+- magic-items/sun-blade
+- magic-items/trident-of-fish-command
+- magic-items/vicious-weapon
+- magic-items/oathbow
 
 ### tools
 - alchemists-supplies
@@ -52,7 +52,7 @@ Final project for Fundamentals of Web Development Module. Building an e-commerce
 - dice-set
 - playing-card-set
 
-### mounts & vehicles
+### mounts & vehicles (discontinued?)
 - cart
 - mule
 - elephant
