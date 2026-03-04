@@ -54,13 +54,13 @@ Final project for Fundamentals of Web Development Module. Building an e-commerce
 
 
 ### instruments
-- flute
-- lyre
-- drum
-- bagpipes
-- lute
-- horn
-- viol
+- equipment/flute
+- equipment/lyre
+- equipment/drum
+- equipment/bagpipes
+- equipment/lute
+- equipment/horn
+- equipment/viol
 
 ### potions
 - magic-items/potion-of-clairvoyance
