@@ -41,7 +41,7 @@ Final project for Fundamentals of Web Development Module. Building an e-commerce
 ### tools
 - equipment/alchemists-supplies
 - equipment/brewers-supplies
-- equipment/caligraphers-supplies
+- equipment/calligraphers-supplies
 - equipment/carpenters-tools
 - equipment/cartographers-tools
 - equipment/cooks-utensils
