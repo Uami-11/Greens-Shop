@@ -41,7 +41,7 @@ async function loadAllItems(){
 
 function renderCard(item){
   const categoryFolder = item.category.toLowerCase().replace(" ", "-");
-  const imgSrc = `../../assets/${catefory`
+  const imgSrc = `../../assets/${category}`
 
   const detailURL = `../product/product.html?type+${item.type}&index=${item.index}`;
 
@@ -57,7 +57,7 @@ function renderCard(item){
       <span class="card-category">${item.category}</span>
       <h3 class="card-name">
 
-        <a href="${detailURL">${item.name}</a>
+        <a href="${detailURL}">${item.name}</a>
       </h3>
       <span class="card-rarity">${item.rarity}</span>
       <span class="card-price">${item.priceDisplay}</span>
@@ -88,7 +88,7 @@ function renderCard(item){
 `;
 }
 
-functon renderGrid(items){
+function renderGrid(items){
   const grid = document.querySelector("#grid");
   const count = document.querySelector("#item-count");
 
