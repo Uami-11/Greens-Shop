@@ -1,0 +1,397 @@
+/* ================================================================
+   theme.css — Light mode (Goblin) + dark mode toggle button
+   Add this file AFTER styles.css in every HTML page:
+   <link rel="stylesheet" href="../../style/theme.css">
+   ================================================================ */
+
+/* ── Light mode variable overrides ──────────────────────────── */
+/* When <body> has the class "light", these values replace the
+   dark-mode defaults defined in styles.css                      */
+
+body.light {
+  --bg:            #e6d5c0;
+  --bg-surface:    #d9c4a8;
+  --bg-card:       #cdb592;
+  --bg-card-alt:   #c4a87c;
+
+  --border:        #a07848;
+  --border-gold:   #72471f;
+
+  --gold:          #dba40e;
+  --gold-light:    #f0c030;
+  --gold-dim:      #a07010;
+
+  --red:           #c0392b;
+  --green:         #076119;
+
+  --text:          #2a1a08;
+  --text-muted:    #543410;
+  --text-dim:      #8a6040;
+
+  --rarity-common:    #526e2e;
+  --rarity-uncommon:  #59981a;
+  --rarity-rare:      #076a57;
+  --rarity-very-rare: #1ad09e;
+  --rarity-legendary: #dba40e;
+}
+
+/* ── Specific element overrides for light mode ───────────────── */
+/* Some elements need more than just colour variable changes      */
+
+body.light {
+  background-image:
+    radial-gradient(ellipse 70% 50% at 20% 80%, rgba(89, 152, 26, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 10%, rgba(114, 71, 31, 0.07) 0%, transparent 50%);
+}
+
+body.light header {
+  background: rgba(214, 190, 155, 0.97);
+  border-bottom-color: var(--border-gold);
+}
+
+body.light header nav a {
+  color: var(--text);
+  border-color: var(--border);
+}
+
+body.light header nav a:hover,
+body.light header nav a.nav-active {
+  border-color: var(--green, #076119);
+  color: var(--green, #076119);
+  background: rgba(7, 97, 25, 0.08);
+}
+
+body.light .brand span {
+  color: #543410;
+  text-shadow: 0 0 16px rgba(84, 52, 16, 0.25);
+}
+
+/* Search bar */
+body.light .search-bar input {
+  background: #ddd0b8;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+body.light .search-bar input::placeholder { color: var(--text-dim); }
+body.light .search-bar input:focus        { border-color: #526e2e; }
+
+body.light .btn-search {
+  background: #526e2e;
+  color: #fff;
+}
+body.light .btn-search:hover { background: #59981a; }
+
+body.light #advanced-btn {
+  background: #cdb592;
+  border-color: var(--border);
+  color: var(--text);
+}
+body.light #advanced-btn:hover { color: #076119; border-color: #526e2e; }
+
+/* Advanced panel */
+body.light .advanced-panel {
+  background: #d9c4a8;
+  border-color: var(--border);
+  border-top-color: #72471f;
+}
+
+body.light .filter-group strong { color: #543410; }
+
+body.light .price-inputs input,
+body.light .filter-group select {
+  background: #ddd0b8;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+body.light .checkbox-list label        { color: var(--text); }
+body.light .checkbox-list label:hover  { color: #076119; }
+body.light .checkbox-list input[type="checkbox"] { accent-color: #526e2e; }
+
+body.light #reset-btn {
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+body.light #reset-btn:hover { border-color: var(--text); color: var(--text); }
+
+/* Cards */
+body.light .product-card {
+  background: var(--bg-card);
+  border-color: #b09070;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+body.light .product-card:hover {
+  border-color: #72471f;
+  box-shadow: 0 6px 20px rgba(84,52,16,0.2);
+}
+
+body.light .card-img-zone        { background: #ddd0b8; }
+body.light .card-category        { color: #543410; }
+body.light .card-name a          { color: var(--text); }
+body.light .card-name a:hover    { color: #076119; }
+body.light .card-rarity          { color: #72471f; }
+body.light .card-price           { color: #dba40e; }
+
+body.light .wishlist-btn {
+  background: rgba(230, 213, 192, 0.85);
+  border-color: #b09070;
+  color: #8a6040;
+}
+body.light .wishlist-btn:hover,
+body.light .wishlist-btn.active {
+  color: #c0392b;
+  border-color: #c0392b;
+  background: rgba(192, 57, 43, 0.1);
+}
+
+body.light .desc-toggle {
+  border-top-color: #b09070;
+  color: #72471f;
+}
+body.light .desc-toggle:hover {
+  color: #076119;
+  background: rgba(7, 97, 25, 0.05);
+}
+
+body.light .card-desc {
+  background: rgba(0,0,0,0.04);
+  border-top-color: #b09070;
+  color: #543410;
+}
+
+/* Detail page */
+body.light .detail-top-card,
+body.light .detail-desc-card {
+  background: var(--bg-card);
+  border-color: #b09070;
+}
+
+body.light .detail-img-box {
+  background: #ddd0b8;
+  border-color: #b09070;
+}
+
+body.light .detail-name  { color: var(--text); }
+body.light .detail-meta  { color: #543410; }
+body.light .detail-price { color: #dba40e; text-shadow: none; }
+
+body.light .desc-heading {
+  color: #526e2e;
+  border-bottom-color: #72471f;
+}
+body.light .desc-body     { color: #543410; }
+body.light .desc-body li  { color: #543410; }
+
+body.light .btn-add-cart {
+  background: rgba(82, 110, 46, 0.12);
+  border-color: #526e2e;
+  color: #526e2e;
+}
+body.light .btn-add-cart:hover {
+  background: rgba(82, 110, 46, 0.22);
+  border-color: #076119;
+}
+body.light .btn-add-cart.added {
+  background: rgba(7, 97, 25, 0.12);
+  border-color: #076119;
+  color: #076119;
+}
+
+body.light .btn-wishlist {
+  background: #cdb592;
+  border-color: #b09070;
+  color: #8a6040;
+}
+
+/* Cart / Wishlist tables */
+body.light .cart-table th,
+body.light .wl-table th {
+  color: #543410;
+  border-bottom-color: #72471f;
+}
+
+body.light .cart-table tbody tr,
+body.light .wl-table tbody tr {
+  background: var(--bg-card);
+}
+
+body.light .cart-table tbody tr:hover,
+body.light .wl-table tbody tr:hover {
+  background: var(--bg-card-alt);
+}
+
+body.light .cart-table td,
+body.light .wl-table td { border-bottom-color: #c4a87c; }
+
+body.light .cart-item-img,
+body.light .wl-item-img {
+  background: #ddd0b8;
+  border-color: #b09070;
+}
+
+body.light .cart-item-name,
+body.light .wl-item-name { color: var(--text); }
+
+body.light .cart-item-name:hover,
+body.light .wl-item-name:hover { color: #076119; }
+
+body.light .cart-item-cat,
+body.light .wl-item-cat { color: #72471f; }
+
+body.light .col-price,
+body.light .col-subtotal { color: #dba40e; }
+
+/* Cart summary */
+body.light .cart-summary {
+  background: #d9c4a8;
+  border-color: #b09070;
+}
+
+body.light .summary-title {
+  color: #526e2e;
+  border-bottom-color: #72471f;
+}
+
+body.light .summary-row       { color: #543410; }
+body.light .summary-total     { color: #dba40e; border-top-color: #b09070; }
+
+body.light .btn-checkout {
+  background: rgba(82, 110, 46, 0.12);
+  border-color: #526e2e;
+  color: #526e2e;
+}
+body.light .btn-checkout:hover { background: rgba(82, 110, 46, 0.24); }
+
+body.light .btn-continue {
+  border-color: #b09070;
+  color: #72471f;
+}
+
+/* Wishlist toolbar */
+body.light .wl-toolbar {
+  background: #d9c4a8;
+  border-color: #b09070;
+}
+
+body.light .btn-select {
+  border-color: #b09070;
+  color: #543410;
+}
+body.light .btn-select:hover { border-color: #526e2e; color: #076119; }
+
+body.light .selected-count    { color: #72471f; }
+
+body.light .btn-add-selected {
+  background: rgba(82, 110, 46, 0.12);
+  border-color: #526e2e;
+  color: #526e2e;
+}
+body.light .btn-add-selected:hover {
+  background: rgba(82, 110, 46, 0.22);
+  border-color: #076119;
+}
+
+body.light .wl-row.is-selected { background: rgba(82, 110, 46, 0.07); }
+body.light .wl-item-cat        { color: #72471f; }
+body.light .col-rarity         { color: #543410; }
+
+/* Modals */
+body.light .modal {
+  background: #d9c4a8;
+  border-color: #72471f;
+}
+body.light .modal-title  { color: var(--text); }
+body.light .modal-text   { color: #543410; }
+
+body.light .btn-confirm {
+  background: rgba(82, 110, 46, 0.14);
+  border-color: #526e2e;
+  color: #526e2e;
+}
+body.light .btn-confirm:hover { background: rgba(82, 110, 46, 0.26); }
+
+body.light .btn-cancel {
+  border-color: #b09070;
+  color: #72471f;
+}
+body.light .btn-cancel:hover { border-color: #543410; color: var(--text); }
+
+/* Scrollbar */
+body.light::-webkit-scrollbar-track { background: #e6d5c0; }
+body.light::-webkit-scrollbar-thumb { background: #72471f; }
+
+/* Page title */
+body.light .page-title {
+  color: #526e2e;
+  border-bottom-color: #72471f;
+}
+
+/* Qty control */
+body.light .qty-control        { border-color: #b09070; }
+body.light .qty-control button { background: #c4a87c; color: var(--text); }
+body.light .qty-control button:hover { background: rgba(82,110,46,0.18); color: #076119; }
+body.light .qty-control input  { background: #ddd0b8; border-color: #b09070; color: var(--text); }
+
+/* Back link */
+body.light .back-link       { color: #72471f; }
+body.light .back-link:hover { color: #526e2e; }
+
+/* Empty state */
+body.light .empty-state     { color: #72471f; }
+
+/* Browse button */
+body.light .btn-browse {
+  background: rgba(82, 110, 46, 0.1);
+  border-color: #526e2e;
+  color: #526e2e;
+}
+body.light .btn-browse:hover {
+  background: rgba(82, 110, 46, 0.2);
+  border-color: #076119;
+}
+
+/* Remove button */
+body.light .btn-remove       { color: #a07848; }
+body.light .btn-remove:hover { color: #c0392b; }
+
+/* Item count text */
+body.light #item-count { color: #72471f; }
+
+/* ── Theme toggle button ─────────────────────────────────────── */
+#theme-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--border-gold);
+  background: var(--bg-card);
+  color: var(--gold);
+
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+  transition: background var(--transition), border-color var(--transition),
+              transform var(--transition), box-shadow var(--transition);
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+body.light #theme-toggle {
+  background: #cdb592;
+  border-color: #526e2e;
+  color: #526e2e;
+}

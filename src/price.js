@@ -2,7 +2,7 @@
 
 export const PRICE_RANGES = {
   "Common": {min: 50, max: 100},
-  "Unommon": {min: 101, max: 500},
+  "Uncommon": {min: 101, max: 500},
   "Rare": {min: 501, max: 5000},
   "Very Rare": {min: 5001, max: 50000},
   "Legendary": {min: 50001, max: 350000},
@@ -34,23 +34,28 @@ export function generatePrice(index, rarity, category){
   return gp;
 }
 
-export function formatPrice(gp){
-  if (gp >= 1){
-    const goldPart = Math.floor(gp);
-    const remainder = Math.round((gp - goldPart) * 100);
-    const silverPart = Math.floor(remainder/10);
+export function formatPrice(gp) {
+  if (gp >= 1) {
+    const goldPart   = Math.floor(gp);
+    const remainder  = Math.round((gp - goldPart) * 100);
+    const silverPart = Math.floor(remainder / 10);
     const copperPart = remainder % 10;
 
     const parts = [];
+    if (goldPart)   parts.push(`${goldPart.toLocaleString()} gp`);
+    if (silverPart) parts.push(`${silverPart} sp`);
+    if (copperPart) parts.push(`${copperPart} cp`);
 
-    if (goldPart)
-      parts.push(`${goldPart.toLocaleString()} gp`);
+    return parts.join(' ') || '0 cp';
 
-    if (silverPart)
-      parts.push(`${silverPart} sp`);
+  } else {
+    // gp is less than 1 — express entirely in sp and cp
+    const sp = Math.floor(gp * 10);
+    const cp = Math.round((gp * 10 - sp) * 10);
 
-    if (copperPart)
-      parts.push(`${copperPart} cp`);
+    const parts = [];
+    if (sp) parts.push(`${sp} sp`);
+    if (cp) parts.push(`${cp} cp`);
 
     return parts.join(' ') || '0 cp';
   }

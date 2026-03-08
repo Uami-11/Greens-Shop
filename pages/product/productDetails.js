@@ -59,7 +59,7 @@ async function loadItem() {
 }
 
 function displayItem(item) {
-  document.title = `${item.name} — The Arcane Emporium`;
+  document.title = `${item.name} — Green's Shop`;
 
   // Fill in the simple text fields
   document.getElementById('detail-name').textContent     = item.name;

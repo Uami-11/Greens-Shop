@@ -1,17 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="cart.js" defer></script>
-    <link rel="stylesheet" href="cart.css">
-    <title>Your Cart</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Green's Shop</title>
+  <link rel="stylesheet" href="../../style/styles.css">
+  <link rel="stylesheet" href="../../style/theme.css">
+  <link rel="stylesheet" href="cart.css">
 </head>
 <body>
-    <div class="cart">
-        <!-- list of items in cart, quantity of each item -->
+
+  <header>
+    <a href="../products/products.html" class="brand">
+      <img src="../../assets/general/logo.jpeg" alt="logo">
+      <span>Green's Shop</span>
+    </a>
+    <nav>
+      <a href="../wishlist/wishlist.html">Wishlist (<span id="wl-count">0</span>)</a>
+      <a href="cart.html" class="nav-active">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="cart-page">
+
+    <h1 class="page-title">Your Cart</h1>
+
+    <!-- Shown when cart is empty -->
+    <div id="cart-empty" class="empty-state">
+      <p>Your cart is empty.</p>
+      <a href="../products/products.html" class="btn-browse">Browse the Shop</a>
     </div>
-    <button>Checkout</button>
-    
+
+    <!-- Shown when cart has items -->
+    <div id="cart-content" class="cart-content">
+
+      <div class="cart-table-wrap">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th class="col-item">Item</th>
+              <th class="col-price">Price</th>
+              <th class="col-qty">Quantity</th>
+              <th class="col-subtotal">Subtotal</th>
+              <th class="col-remove"></th>
+            </tr>
+          </thead>
+          <tbody id="cart-body">
+            <!-- Rows injected by JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Order summary panel -->
+      <div class="cart-summary">
+        <h2 class="summary-title">Order Summary</h2>
+
+        <div class="summary-row">
+          <span>Items</span>
+          <span id="summary-count">0</span>
+        </div>
+
+        <div class="summary-row summary-total">
+          <span>Total</span>
+          <span id="summary-total">0 gp</span>
+        </div>
+
+        <button id="checkout-btn" class="btn-checkout">
+          Proceed to Checkout
+        </button>
+
+        <a href="../products/products.html" class="btn-continue">
+          Continue Shopping
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Checkout confirmation modal -->
+    <div id="checkout-modal" class="modal-overlay">
+      <div class="modal">
+        <h2 class="modal-title">Confirm Your Order</h2>
+        <p id="modal-confirm-text" class="modal-text"></p>
+        <div class="modal-actions">
+          <button id="btn-confirm" class="btn-confirm">Place Order</button>
+          <button id="btn-cancel"  class="btn-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success message modal -->
+    <div id="success-modal" class="modal-overlay">
+      <div class="modal">
+        <h2 class="modal-title">Order Placed!</h2>
+        <p class="modal-text">
+          Your items are on their way. Safe travels, adventurer.
+        </p>
+        <a href="../products/products.html" class="btn-confirm">
+          Back to Shop
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="../../src/theme.js"></script>
+  <script type="module" src="cart.js"></script>
 </body>
 </html>
